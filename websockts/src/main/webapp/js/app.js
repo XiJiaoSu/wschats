@@ -9,7 +9,7 @@
 
     JCoding.api=api;
 
-    JCoding.api.IP="10.222.29.181";
+    JCoding.api.IP="192.168.100.30";
     JCoding.api.PORT="9090";
 
     getIp=obj=>{
