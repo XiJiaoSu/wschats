@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>聊天界面</title>
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="chat-bg">
+<header class="header-title">标题</header>
+<section class="chat-box">
+    <span class="chat-trip">此刻对方忙碌，请留言</span>
+    <div class="bubbleDiv"></div>
+</section>
+<footer class="chat-edit clearfix">
+
+    <p class="chat-info" placeholder="想咨询他什么内容..." contenteditable="true"></p>
+    <span class="uploadImg fl"><input type="file" name="uploadfile" class="uploadfile"></span>
+    <button class="send-btn fr">发送</button>
+</footer>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/chat.js"></script>
+<script>
+    $(document).ready(function(){
+        /*
+         左侧 接收别人信息 调用，三个参数：leftBubble，头像路径，内容
+         chat(element,imgSrc,doctextContent)
+         */
+        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+
+        $(".send-btn").click(function(){
+            //右侧 自己发 调用，只需填一个参数"rightBubble"
+            chat("rightBubble");
+
+            //清空输入框
+            $('.chat-info').html('');
+
+        })
+    })
+</script>
+</body>
+</html>

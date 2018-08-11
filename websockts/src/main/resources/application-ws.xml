@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/websocket
+        http://www.springframework.org/schema/websocket/spring-websocket.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="websockts.container.support"></context:component-scan>
+
+	<bean id="chatHandler" class="websockts.handler.ChatHandler"></bean>
+
+
+
+	<websocket:handlers allowed-origins="*">
+		<websocket:mapping handler="chatHandler" path="/chatHadler" />
+		<websocket:handshake-interceptors>
+			<bean class="websockts.interceptor.ChatHandlerInterceptor"></bean>
+		</websocket:handshake-interceptors>
+	
+	</websocket:handlers>
+
+
+
+</beans>

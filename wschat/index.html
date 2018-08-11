@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div id="chat_window"  class="row">
+        <div class="col-md-2 col-sm-2">
+            <div id="chat_group" class="col-md-12">
+
+            </div>
+        </div>
+        <div id="chat_left" class="col-md-7 col-sm-7">
+            <div id="chat_content" class="row">
+            </div>
+            <div id="chat_input" class="row">
+                <input type="text" id="chat_info" class="col-md-12">
+            </div>
+            <div id="chat_bar" class="row">
+                <div class="col-md-10"></div>
+                <input type="button" value="send"class="col-md-2" id="chat_send">
+            </div>
+
+        </div>
+        <div id="chat_right" class="col-md-3 col-sm-3">
+
+        </div>
+    </div>
+</div>
+
+<div id="bubble_tmp" class="bubble">
+    <span class="article"></span>
+</div>
+<div id="onlist_tmp">
+    <div class="online_item"></div>
+</div>
+<div id="chat_list_tmp" class="chat_obj">
+    <div class="chat_name"></div>
+</div>
+
+
+<script src="js/app.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
+</html>

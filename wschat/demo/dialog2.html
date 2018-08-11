@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dialog2</title>
+    <style>
+        .chat-thread{padding:10px 2px; border:5px solid #beceeb; position:relative;border-radius: 6px}
+        .chat-thread span{width:0; height:0; overflow:hidden; position:absolute;}
+        .chat-thread span.bot{
+            border-width:20px;
+            border-style:solid dashed dashed;
+            border-color:#beceeb transparent transparent;
+            left:80px;
+            bottom:-40px;
+        }
+        .chat-thread span.top{
+            border-width:20px;
+            border-style:solid dashed dashed;
+            border-color:#ffffff transparent transparent;
+            left:80px;
+            bottom:-33px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="chat-thread">
+    <span class="bot"></span>
+    <span class="top"></span>
+    我是用边框法实现的背景白色的对话框噢
+</div>
+</body>
+</html>
